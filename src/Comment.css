@@ -1,0 +1,41 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+button {
+    margin: 5px;
+}
+
+.comment {
+    margin: 5px;
+    width: 100%;
+    display: inline-block;
+    background-color: #bdc3c7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.remove {
+    background-color: #c0392b;
+}
+
+.thumbUp {
+    background-color: #3498db;
+}
+
+.thumbDown {
+    background-color: #3498db;
+}
+
+.commentText {
+    font-size: 20px;
+}

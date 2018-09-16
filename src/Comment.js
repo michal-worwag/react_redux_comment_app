@@ -1,11 +1,20 @@
 import React from 'react';
+import './Comment.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 
-const Comment = ({text, votes, id, thumbUpComment, thumbDownComment}) =>
+
+const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, removeComment}) =>
     <li>
-        <button onClick={() => thumbDownComment(id)}>Thumb down</button>
-        {text}
-        <span>votes: {votes}</span>
-        <button onClick={() => thumbUpComment(id)}>ThumbUp</button>
+        <div className='comment'>
+            <button className='thumbUp' onClick={() => thumbUpComment(id)}><FontAwesomeIcon icon={faThumbsUp}/></button>
+            <button className='thumbDown' onClick={() => thumbDownComment(id)}><FontAwesomeIcon icon={faThumbsDown}/></button>
+            <div className='commentText'>{text}</div>
+            <div className='votes'>votes: {votes}</div>
+            <button className='remove' onClick={() => removeComment(id)}><FontAwesomeIcon icon={faTrashAlt}/></button>
+        </div>
         </li>
 
 export default Comment;
